@@ -11,3 +11,4 @@ RUN npm install --production
 COPY . .
 
 CMD [ "npm", "run", "dock-starter"]
+
