@@ -1,9 +1,9 @@
-const express = require('express')
-const app = express()
-const port = 3000
-const path = require('path')
-const bodyParser = require('body-parser')
-const axios = require('axios')
+const express = require('express');
+const app = express();
+const port = 3000;
+const path = require('path');
+const bodyParser = require('body-parser');
+const axios = require('axios');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -24,8 +24,8 @@ app.get('/api/img_carousel/:id', (req, res) => {
   const { id } = req.params;
   axios.get(`http://3.101.61.202:8080/api/img_carousel/${id}`)
     .then(({ data }) => {
-      res.status(200).send(data)
-    }).catch((err) => res.status(400).send(err))
+      res.status(200).send(data);
+    }).catch((err) => res.status(400).send(err));
 });
 
 // Reviews app routes
@@ -37,9 +37,9 @@ app.get('/api/img_carousel/:id', (req, res) => {
 
 app.get('/api/reviews/:id', (req, res) => {
   axios.get(`http://54.215.215.126:8080/api/reviews/${req.params.id}`)
-  .then(({ data }) => {
-    res.status(200).send(data)
-  }).catch((err) => res.status(400).send(err));
+    .then(({ data }) => {
+      res.status(200).send(data);
+    }).catch((err) => res.status(400).send(err));
 });
 
 // Gallery app routes
@@ -50,10 +50,10 @@ app.get('/api/reviews/:id', (req, res) => {
 // });
 
 app.get('/api/galleries/:id', (req, res) => {
-  axios.get(`http://72.134.126.46:8080/api/galleries/${req.params.id}`)
-  .then(({ data }) => {
-    res.status(200).send(data)
-  }).catch((err) => res.status(400).send(err));
+  axios.get(`http://13.52.246.93:8080/api/galleries/${req.params.id}`)
+    .then(({ data }) => {
+      res.status(200).send(data);
+    }).catch((err) => res.status(400).send(err));
 });
 
 // Checkout app routes
@@ -65,11 +65,11 @@ app.get('/api/galleries/:id', (req, res) => {
 
 app.get('/api/checkout/:id', (req, res) => {
   axios.get(`http://34.219.249.230:8080/api/checkout/${req.params.id}`)
-  .then(({ data }) => {
-    res.status(200).send(data)
-  }).catch((err) => res.status(400).send(err));
+    .then(({ data }) => {
+      res.status(200).send(data);
+    }).catch((err) => res.status(400).send(err));
 });
 
 app.listen(port, () => {
-  console.log(`Proxy server listening at http://localhost:${port}`)
+  console.log(`Proxy server listening at http://localhost:${port}`);
 });
