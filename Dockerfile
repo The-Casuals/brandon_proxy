@@ -10,4 +10,4 @@ RUN npm install --production
 
 COPY . .
 
-CMD [ "node", ""]
+CMD [ "npm", "run", "dock-starter"]
