@@ -22,7 +22,7 @@ app.use('/:id', express.static(path.join(__dirname, '../public')));
 // gets img carousel from database
 app.get('/api/img_carousel/:id', (req, res) => {
   const { id } = req.params;
-  axios.get(`http://3.101.61.202:8080/api/img_carousel/${id}`)
+  axios.get(`http://13.56.115.246:8080/api/img_carousel/${id}`)
     .then(({ data }) => {
       res.status(200).send(data);
     }).catch((err) => res.status(400).send(err));
