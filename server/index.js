@@ -4,7 +4,7 @@ const port = 3000;
 const path = require('path');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-const compresstion = require('compression');
+const compression = require('compression');
 
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: false }));
