@@ -16,7 +16,7 @@ app.use('/:id', express.static(path.join(__dirname, '../public')));
 // Photo Carousel
 // gets photo carousel bundle.js
 // app.get('/:id/bundles/img_carousel', (req, res) => {
-//   axios.get(`http://3.101.61.202:3004/${req.params.id}`)3.101.61.202
+//   axios.get(`http://3.101.61.202:3004/${req.params.id}`)
 //   .then(({ data }) => res.status(200).send(data))
 //   .catch((err) => res.status(400).send(err))
 // });
